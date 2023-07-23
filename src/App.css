@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: #ffff;
   padding: 10px;
 }
 .main {
@@ -20,6 +20,8 @@ section#todoList {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.15);
 }
 
 p {
@@ -45,6 +47,7 @@ section#todoList .input input {
   background: #fff;
   border-radius: 5px;
   border: 1px solid #ccc;
+  height: 40px;
 }
 
 input {
@@ -68,7 +71,6 @@ input {
   border-style: inset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
-  height: 7vh;
 }
 
 section#todoList ul li button {
@@ -92,11 +94,64 @@ input[type="checkbox" i] {
   cursor: default;
   appearance: auto;
   box-sizing: border-box;
-  margin: 3px 3px 3px 4px;
+  margin: 3px 10px 3px 4px;
   padding: initial;
   border: initial;
 }
 
 .completed {
   margin-right: 30px;
+}
+
+div.input {
+  position: relative;
+}
+
+div.input .plusBtn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+section#todoList ul.listItems {
+  margin: 30px 0 0 0;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.listItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 5px 0 6px;
+}
+
+ul.listItems li .todoicons {
+  display: inline-flex;
+  align-items: center;
+}
+
+ul.listItems li .todoicons button {
+  margin-left: 10px !important;
+}
+
+ul.listItems li .completed {
+  display: flex;
+  align-items: center;
+}
+
+.addPlus {
+  font-size: 20px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
 }
